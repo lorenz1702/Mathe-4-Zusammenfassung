@@ -1,0 +1,64 @@
+\section{Deskriptive Statistik (Wahrscheinlichkeitstheorie)}
+
+Gegeben sei die Stichprobe $x=(x_1,..,x_n)$ vom Umfang $n$ mit Werten in $\mathbb{R}$.
+\[\overline{x}:= \frac{1}{n}*\sum_{i = 1}^{n}=\frac{x_1+...+x_n}{n}     \]
+
+heißt Stichproben-Mittel,
+
+\[{s_x}^2:=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\overline{x})^2   =\frac{(x_1-\overline{x})^2+...+(x_n-\overline{x})^2}{n-1}\]
+
+Stichproben-Varianz, wobei $n\geq 2$
+
+\[s_x := +\sqrt{{s_x}^2} \]
+
+Stichproben-Standaedabweichung und
+
+\[v_x := \frac{s_x}{x} \]
+
+für $x_1,...,x_n >0 $ heißt Stichproben-Variantionskoeffizient.\\
+
+Der Stichproben-Median (Zentralwert) von $x$
+
+\[\tilde{x} :=\begin{cases}x_{(\frac{n+1}{2})}\textrm{    ,falls $n$ ungerade}\\
+    \frac{1}{2}*(x_{(\frac{n}{2})}+x_{(\frac{n}{2}+1)})\textrm{ ,falls n gerade}\end{cases}\]
+
+Stichproben -$\alpha$-Quantil\\
+
+Sei $\alpha \in (0,1)$ und $k:=[n*\alpha]$. Dann heißt
+
+\[\tilde{x}_\alpha  :=\begin{cases}x_{(k+1)}\textrm{,falls $n*\alpha \notin \mathbb{N} $}\\
+    \frac{1}{2}*(x_{(k)}+x_{(k+1)})\textrm{,sonst}\end{cases}\]
+
+
+$\alpha$-getrimmte Stichproben-Mittel(kommt nicht dran)\\
+
+Sei $\alpha \in [0,0.5]$ und $k:=[n*\alpha ]$. Dann heißt
+
+\[\tilde{x}_\alpha := \frac{1}{n-2*k}*(x_{(k+1)}+...+x_{(n-k)}) \]
+
+das $\alpha $-getrimmte (gestutzte) Stichproben-Mittel.
+
+
+\subsection{Wahrscheinlichkeitsräume}
+
+auch Stochastisches Modell Zufallsexperiment\\
+ist ein Tripel($\Omega ,\mathcal{E}, \mathbb{P}$)
+\begin{itemize}
+    \item [i] Grundraum $\Omega\neq \varnothing  $
+    \item [ii] Ereignisraum $\varepsilon $
+    \item [iii] Wahrscheinlichkeitsmaß $\mathbb{P}$
+\end{itemize}
+$\mathbb{P} :\varepsilon \longleftarrow [0,1]$ weißt jedem Ereignis eine Wahrscheinlichkeit zu.\\
+
+Wie berechent man das Wahrscheinlichkeitsmaß?\\
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+    \item $\mathbb{P}(\emptyset) = 0$
+    \item $\mathbb{P} (\sum_{j = 1}^{n} A_j)=\sum_{j = 1}^{n}\mathbb{P} (A_j) $ ,falls $A_1,...,A_n$ paarweise disjunkt (endliche Additivität)
+    \item $\mathbb{P} (A^c)= 1-\mathbb{P} (A)$, $\forall A:A\in \mathcal{A} \longleftarrow A^c\in \mathcal{A} $
+    \item $A\subset B \longleftarrow \mathbb{P}(A)\leq \mathbb{P} (B)$(Monotonie)
+    \item $\mathbb{P} (A\cup B)=\mathbb{P} (A)+\mathbb{P} (B)-\mathbb{P} (A\cap B)$
+\end{enumerate}
+c) Wegen $\Omega = A+A^c$ und b) gilt $1 = \mathbb{P} (\Omega)=\mathbb{P} (A)+\mathbb{P} (A^c)$.
+
+genauers wird in den Späteren Vorlesung erläutert.\\
