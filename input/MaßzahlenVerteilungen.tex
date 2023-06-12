@@ -1,0 +1,64 @@
+\section{Maßzahlen von Verteilungen}
+
+\subsection{Erwartungswert}
+$X(w_j):$ Gewinn bei Ausgang $w_j$\\
+$n$ Spiele, $h_j$ mal triet der Ausgang $w_j$ auf.
+Frage: Wie kommt man auf $h_j$?\\
+Man macht ein paar versuche wenn $n$ groß genug ist kann man die Wahrscheinlichkeit näherungsweise bestimmen.
+\[X(w_1)\cdot \underbrace{\frac{h_1}{n}}_{\rightsquigarrow p(w_1)}\]
+
+\textbf{Satz 12.3}: Eigenschaften des Erwartungswert
+\begin{itemize}
+    \item [a.] $\mathbb{E}(X+Y) = \mathbb{E}X +  \mathbb{E}Y$
+    \item [b.] $\mathbb{E}(a\cdot X) = a\cdot \mathbb{E}X, a\in \mathbb{R} $ Linearität der Erwartungswertbildung
+    \item [c.] Der Rest so nicht wichtig aus falls interrese siehe Vorlesung 8 Seite 8
+\end{itemize}
+    
+
+\begin{table}[h]
+    \begin{tabular}{|l|l|}
+    \hline
+    Verteilung     & Erwartungswert     \\ \hline
+    $Bin(n,p)$     & $n\cdot p$         \\
+    $Po(\lambda)$  & $\lambda$          \\ \hline
+    $N(\mu,\sigma ^2)$   & $\mu$              \\
+    $U(a,b)$       & $(a+b)/2$          \\
+    $Exp(\lambda)$ & $\frac{1}{\lambda}$ \\ \hline
+    \end{tabular}
+    \caption{Erwartungswerte wichtiger Verteilungen}
+    \label{Erwartungswerte wichtiger Verteilungen}
+\end{table}
+
+
+
+
+\subsection{Varianz}
+\textbf{Satz 12.6} Eigenschaften der Varianz\\
+\begin{itemize}
+    \item [b.] $V(X) =\mathbb{E}(X^2)-(\mathbb{E}X)^2$
+    \item [c.] $V(a\cdot X +b)= a^2\cdot V(X), a,b \in \mathbb{R} $
+\end{itemize}
+
+\textbf{Satz 12.7}\\
+$X\thicksim \mathcal{N}(\mu,\sigma^2)\Longrightarrow V(X)=\sigma^2\textrm{,d.h}\mathcal{N}(\mu,\sigma^2)$ besitzt den Erwartungswert $\mu$ und die Varianz $\sigma^2$. Speziell besitzt die Standard-Normalverteilung $\mathcal{N}(0,1)$ den Erwartungswert 0 und die Varianz 1. 
+
+\begin{table}[h]
+    \begin{tabular}{|l|l|}
+    \hline
+    Verteilung     & Varianz               \\ \hline
+    $Bin(n,p)$     & $n\cdot p\cdot (1-p)$ \\
+    $Po(\lambda)$  & $\lambda$             \\ \hline
+    $N(\mu,\sigma^2)$   & $\sigma$                 \\
+    $U(a,b)$       & $(b-a)^2/12$          \\
+    $Exp(\lambda)$ & $\frac{1}{\lambda^2}$ \\ \hline
+    \end{tabular}
+    \caption{Varianzen wichtiger Verteilungen}
+    \label{Varianzen wichtiger Verteilungen}
+\end{table}
+
+
+\subsection{Standardabweichung}
+Hat die Zufallsvariable $X$ den Erwartungswert $\mathbb{E}X$, so heißt 
+\[\sigma^2_X:= V(X) := \mathbb{E}(X-\mathbb{E}X)^2\]
+die Varianz(der Verteilung) von $X$.\\
+$\sigma_X:=\sqrt{V(X)} $ heißt die \textbf{Standardabweichung}(der Verteilung) von $X$.

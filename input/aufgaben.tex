@@ -88,7 +88,23 @@ a.\\
 \[P(N>3) = 1-(X\leq 3)= 1-\Phi _{2,0.5^2}(3)=1-\Phi (\frac{3-2}{0.5} )=\Phi (2)=1-0.97=0.03\]
 
 \subsection{24.05}
+Aufgabe 18 ist ein gute Übung für bedingte wahrscheinlichkeit.\\
+\textbf{Aufgaben 20a}\\
+Als Beispiel für bedingte wahrscheinlichkeit nutzen
 
-Aufgabe 18 und Aufgabe 20a
+Auf einem Mail-Server sind 96\% der ankommenden Mails Spam.\\
+a.$)$Die Wahrscheinlichkeit liegt bei 90\% das eine Mail als Spam erkannt wird(d.h. mit 10\% das der Spam durch geht). Die Wahrscheinlichkeit das ein echte Mail als Spam erkannt wird liegt bei 2\%. Welcher Anteil der Mails, sind im langfristigen Mittel Spam-Mails?
+\begin{align*}
+    S&:= \textrm{der eingehenden Mails sind Spam} &\overline{S}&:= \textrm{nicht Spam}\\
+    P&(S)=0.96 &P(\overline{S})&=0.04\\
+    P&(S\cap L)= 0.96\cdot 0.90=0.864  &P(S\cap\overline{L})&=0.96\cdot0.10 = 0.096\\
+    P&(\overline{S}\cap L)= 0.04\cdot 0.02 = 0.0008 &P(\overline{S}\cap\overline{L})&=0.04\cdot0.98 = 0.0392
+\end{align*}
+Es kommen 13.52\% der einkommenden Mails durch
+\begin{align*}
+    P(\overline{L})&= 0.1352\\
+    P(S\cap\overline{L})&= 0.096\\
+    P(S|\overline{L})&= \frac{P(S\cap \overline{L})}{P(\overline{L})} = \frac{0.096}{0.1352}\approx  0.71
+\end{align*}
 
 

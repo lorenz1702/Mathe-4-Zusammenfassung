@@ -1,0 +1,43 @@
+\section{Übergangswahrscheinlichkeiten und bedingte Wahrscheinlichkeiten}
+
+\subsection{Bedingte Wahrscheinlichkeit}
+$(\Omega ,\mathcal{A} ,\mathbb{P} )$Wahrscheinlichkeitsraum,$A,B\in \mathcal{A} $ mit $\mathbb{P} (B)>0$. Dann heißt
+
+\[\mathbb{P} (A|\footnote[1]{Der senkrechte Strich \dq|\dq steht also für \dq unter der Bedingung,dass\dq.}B):=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}\]
+
+die bedingte Wahrscheinlichkeit von $A$ unter der Bedingung $B$.\\
+
+\textbf{Allgemeine Rechenoperationen: }\\
+Wahrscheinlichkeiten ver\textbf{UND}en erstellt man durch Multiplikation.
+\[P(O\cap M3)=P(O|M3)\cdot P(M3)\]
+Ver\textbf{ODER}n erstellt man in dem man die Wahrscheinlichkeit der beiden Ereigniss addiert und mit der Wahrscheinlichkeit der verundung der beiden ereignisse subtrahiert.
+\[P(O\cup M3)=P(O)+P(M3)-P(O\cap M3)\]
+
+\subsection{Gesetz der totalen Wahrscheinlichkeit}
+Sind nur bedingte Wahrscheinlichkeiten und die Wahrscheinlichkeiten des bedingenden Ereignisses bekannt, ergibt sich dei totale Wahrscheinlichkeit von $A$ aus
+
+\[P(A) = P(A|B)\cdot P(B)+P(A|B^c)\cdot P(B^c)\]
+wobei $B^c$ das Gegenereignis zu $B$ bezeichnet.
+
+\subsection{Satz von Bayes}
+Für den Zusammenhang zwischen $P(A|B)$ und $P(B|A)$ ergibt sich direkt aus der Definition und der Multiplikationssatz der Satz von Bayes:
+
+\[P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(B\cap A)}{P(B)}=\frac{P(B|A)\cdot P(A)}{P(B)}\].
+
+Dabei kann $P(B)$ im Nenner mit Hilfe des Gesetzes der totalen Wahrscheinlichkeit berechnet werden.
+
+\subsection*{Beispiel Aufgabe}
+Auf einem Mail-Server sind 96\% der ankommenden Mails Spam.\\
+a.$)$Die Wahrscheinlichkeit liegt bei 90\% das eine Mail als Spam erkannt wird(d.h. mit 10\% das der Spam durch geht). Die Wahrscheinlichkeit das ein echte Mail als Spam erkannt wird liegt bei 2\%. Welcher Anteil der Mails, sind im langfristigen Mittel Spam-Mails?
+\begin{align*}
+    S&:= \textrm{der eingehenden Mails sind Spam} &\overline{S}&:= \textrm{nicht Spam}\\
+    P&(S)=0.96 &P(\overline{S})&=0.04\\
+    P&(S\cap L)= 0.96\cdot 0.90=0.864  &P(S\cap\overline{L})&=0.96\cdot0.10 = 0.096\\
+    P&(\overline{S}\cap L)= 0.04\cdot 0.02 = 0.0008 &P(\overline{S}\cap\overline{L})&=0.04\cdot0.98 = 0.0392
+\end{align*}
+Es kommen 13.52\% der einkommenden Mails durch
+\begin{align*}
+    P(\overline{L})&= 0.1352\\
+    P(S\cap\overline{L})&= 0.096\\
+    P(S|\overline{L})&= \frac{P(S\cap \overline{L})}{P(\overline{L})} = \frac{0.096}{0.1352}\approx  0.71
+\end{align*}
