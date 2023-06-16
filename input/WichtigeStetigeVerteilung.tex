@@ -1,0 +1,61 @@
+\section{Wichtige stetige Verteilung}
+
+\subsection{Normalverteilung}
+
+\[P(X\leq x)= F(x)=\Phi_{\mu ,\sigma ^2}(x)=\int_{x}^{-\infty} \frac{1}{\sigma\sqrt{2\pi}}\cdot e^{-(x-\mu)^2/(2\sigma^2)} \,dx \]
+Die Dichte ist
+\[\varphi_{\mu,\sigma^2}(x)=\frac{1}{\sigma\sqrt{2\pi}}\cdot e^{-(x-\mu)^2/(2\sigma^2)}\]
+
+Die Verteilungsfunktion $\Phi_{\mu ,\sigma ^2}(x)$ der Normalverteilung ist \textbf{nicht als geschlossene Funktion} darstellbar(d.h. ohne Integral oder unendliche Reihe). Für die Standardnormalverteilung ist sie tabelliert.
+
+\[\Phi(-x)=1-\Phi(x)\]
+Sei $X~\mathcal{N} (\mu,\sigma^2)$. Dann gilt
+
+\[\mathbb{P} (X\leq t)=\Phi_{\mu ,\sigma ^2}(t)=\Phi\left( \frac{t-\mu}{\sigma} \right)\]
+
+Beispiel: Sei$X~\mathcal{N} (2,9)$. Dann ist
+
+\begin{align}
+    P(1\leq X\leq 4)&=F_X(4)-F_X(1)\\
+    &=\Phi\left(\frac{4-2}{\sqrt{9}}\right)-\Phi\left(\frac{1-2}{\sqrt{9} } \right)\\
+    &=\Phi(0.67)-\Phi(-0.33)\\
+    &=0.7486-(1-\Phi(0.33))\\
+    &=0.7486-(1-0.6293)\\
+    &=0.3779
+\end{align}
+
+Beispiel: Angenommen das Gewicht G der Studenten der DHBW Karlsruhe sei normalverteilt mit $\mu =75$kg und $\sigma=5$kg.\\
+
+Bestimmen sie $P(69kg<G<81kg)$ rechnerisch mittels Tabelle.
+
+\[P(69kg<G<81kg)=\Phi_{75,5^2}(81)-\Phi_{75,5^2}(69)\]
+
+Zwei Studenten werden zufällig und unabhängig voneinander ausgewählt. Wie wahrscheinlich ist es das beide zwischen 69 und 81kg wiegen?
+\begin{align}
+    P(A)=P(B)&=76.9\%\textrm{ Ergebnis aus vorheriger Aufgabe}\\
+    P(A\cap B)=P(A)\cdot P(B)&=0.769^2\thickapprox \underline{59.1\% }
+\end{align}
+
+\textbf{Satz 9.8}
+\begin{itemize}
+    \item [$a)$] $X\thicksim \mathcal{N} (\mu,\sigma^2)\Longrightarrow a+b\cdot X \thicksim \mathcal{N}(a+b\cdot\mu,b^2\cdot\sigma^2)\textrm{, falls } b\neq 0.$
+    \item [$b)$] $X\thicksim \mathcal{N}(\mu,\sigma^2) \Longrightarrow \frac{X-\mu}{\sigma}\thicksim \mathcal{N}(0,1).$
+    \item [$c)$] $X\thicksim \mathcal{N}(0,1) \Longrightarrow a+b\cdot X \thicksim \mathcal{N}(a,b^2)\textrm{, falls }b \neq 0.$
+\end{itemize}
+
+\subsection{Exponential Verteilung}
+Ist in Vorlseing 5 muss sich noch angeschaut werden.
+
+Wahrscheinlichkeit $P< X = F_1(X)$
+\[F_1(t) = 1- e^{-\lambda\cdot t},t\geq 0\]
+und der Dichte
+\[f_1(x) = \lambda \cdot e^{-\lambda \cdot x}, x\geq 0\]
+
+\textbf{Beispiel: }Die Zeit $T$ , die Sie für Ihre tägliche Laufstrecke brauchen, sei exponentialverteilt mit
+Parameter $\lambda = 0.1$. Wie wahrscheinlich ist es, dass Sie
+\begin{itemize}
+    \item weniger als 27 Minuten brauchen? $P(T<27) = F(27)$
+    \item mehr als 27 Minuten brauchen? $P(T>27)=1-P(T<27)$
+    \item höchstens 24 Minuten brauchen?  $P(T)$
+\end{itemize}
+

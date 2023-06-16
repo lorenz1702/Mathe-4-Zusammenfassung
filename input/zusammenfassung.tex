@@ -8,7 +8,15 @@ Seien $n$ eine natürliche Zahl und $0\leq p\leq 1$. Die zur Zähldichte
 
 \[k\longrightarrow f(k)=\binom{n}{k}\cdot p^k\cdot (1-p)^{n-k},k=0,...,n, \]
 
-gehörende Verteilung heißt \texttt{Binomialverteilung} mit den Parametern $n$ und $p$ und wird mit $Bin(n,p)$ bezeichnet.
+gehörende Verteilung heißt \texttt{Binomialverteilung} mit den Parametern $n$ und $p$ und wird mit $Bin(n,p)$ bezeichnet.\\
+
+\textbf{Beispiel: } Der Tetraeder wird 4 Mal geworfen. Berechnen sie die Wahrscheinlichkeiten der Ereignisse:
+\begin{itemize}
+    \item Jedes Mal die \dq 1\dq $=\binom{4}{4} \cdot (\frac{1}{4})^4\cdot (1-\frac{1}{4})^{0}\approx 0.0039$
+    \item Zweimal die \dq 1\dq $=\binom{4}{2} \cdot (\frac{1}{4})^2\cdot (1-\frac{1}{4})^{4-2}\approx 0.2109$
+    \item Alle Augenzahlenverschieden $=\frac{4}{4}\cdot\frac{3}{4}\cdot \frac{2}{4}\cdot \frac{1}{4} \approx 0.09375$
+\end{itemize}
+
 
 \subsection{Poisson-Verteilung}
 
@@ -19,50 +27,4 @@ Ideales Zufallsexperiment mit kleiner Erfolgswahrscheinlichkeit $p$ werde $n$ ma
 für $k\leq n$.
 
 Wann es angewendet wird muss sic noc anescaut werden.
-
-\section{Wichtige stetige Verteilung}
-
-\subsection{Normalverteilung}
-
-\[P(X\leq x)= F(x)=\Phi_{\mu ,\sigma ^2}(x)=\int_{x}^{-\infty} \frac{1}{\sigma\sqrt{2\pi}}\cdot 2^{-(x-\mu)^2/(2\sigma^2)} \,dx \]
-
-Die Verteilungsfunktion $\Phi_{\mu ,\sigma ^2}(x)$ der Normalverteilung ist \textbf{nicht als geschlossene Funktion} darstellbar(d.h. ohne Integral oder unendliche Reihe). Für die Standardnormalverteilung ist sie tabelliert.
-
-\[\Phi(-x)=1-\Phi(x)\]
-Sei $X~\mathcal{N} (\mu,\sigma^2)$. Dann gilt
-
-\[\mathbb{P} (X\leq t)=\Phi_{\mu ,\sigma ^2}(t)=\Phi\left( \frac{t-\mu}{\sigma} \right)\]
-
-Beispiel: Sei$X~\mathcal{N} (2,9)$. Dann ist
-
-\begin{align}
-    P(1\leq X\leq 4)&=F_X(4)-F_X(1)\\
-    &=\Phi\left(\frac{4-2}{\sqrt{9}}\right)-\Phi\left(\frac{1-2}{\sqrt{9} } \right)\\
-    &=\Phi(0.67)-\Phi(-0.33)\\
-    &=0.7486-(1-\Phi(0.33))\\
-    &=0.7486-(1-0.6293)\\
-    &=0.3779
-\end{align}
-
-Beispiel: Angenommen das Gewicht G der Studenten der DHBW Karlsruhe sei normalverteilt mit $\mu =75$kg und $\sigma=5$kg.\\
-
-Bestimmen sie $P(69kg<G<81kg)$ rechnerisch mittels Tabelle.
-
-\[P(69kg<G<81kg)=\Phi_{75,5^2}(81)-\Phi_{75,5^2}(69)\]
-
-Zwei Studenten werden zufällig und unabhängig voneinander ausgewählt. Wie wahrscheinlich ist es das beide zwischen 69 und 81kg wiegen?
-\begin{align}
-    P(A)=P(B)&=76.9\%\textrm{ Ergebnis aus vorheriger Aufgabe}\\
-    P(A\cap B)=P(A)\cdot P(B)&=0.769^2\thickapprox \underline{59.1\% }
-\end{align}
-
-
-\subsection{Exponential Verteilung}
-Ist in Vorlseing 5 muss sich noch angeschaut werden.
-
-Wahrscheinlichkeit $P\leq X = F_1(X)$
-\[F_1(t) = 1- e^{-\lambda\cdot t},t\geq 0\]
-und der Dichte
-\[f_1(x) = \lambda \cdot e^{-\lambda \cdot x}, x\geq 0\]
-
 

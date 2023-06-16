@@ -3,11 +3,12 @@ Beschreibt die Genauigkeit eines Schätzwertes mit einer Wahrscheinlichkeit von 
 \begin{align*}
     KI &= \overline{x} \pm \overbrace{Z}^{\textrm{Z-Wert für das Konfidenzniveau}} \cdot \frac{\overbrace{\sigma}^{\textrm{Standardabweichung}}}{\underbrace{\sqrt{n}}_{\textrm{Stichprobengröße}} }\\
     \mu& \in \left[\overline{x}-Z\cdot \frac{\sigma}{\sqrt{n}},\overline{x}+Z\cdot \frac{\sigma}{\sqrt{n}}\right] \\
-    Z &=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}},\textrm{Wird aber meinst aus der Tabelle abgelesen}\\
-    P(Z\geq q)&= \gamma \Leftrightarrow 1-\Phi (q)= \gamma \Leftrightarrow \Phi (-q) =\gamma \overbrace{\Leftrightarrow}^{\textrm{Tabelle}}-q = 1.65 \Leftrightarrow q = -1.65 
+    Z &=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}},\textrm{Wird aber meinst aus der Tabelle abgelesen} 
 \end{align*}
-Bestimmen des \textbf{einseitigen Konfidenzintervall} das eine obere Schranke zum 
-
+Bestimmen des \textbf{symmetrische Konfidenzintervall} \[q:=\frac{1+\gamma}{2}\]
+Bestimme das \textbf{einseitige Konfidenzintervall} mit oberer Schranke welches nach \textbf{unten} offen ist.
+\[P(Z\geq q)= \gamma \Leftrightarrow 1-\Phi (q)= \gamma \Leftrightarrow \Phi (-q) =0.95 \overbrace{\Leftrightarrow}^{\textrm{Tabelle}}-q = 1.65 \Leftrightarrow q = -1.65 \]
+\[(-\infty,\overline{x}+q\frac{\sigma}{\sqrt{n}})\]
 
 \textbf{Sigmaumgebung mit einer festen prozentualen Richtgröße}
 \begin{align*}
